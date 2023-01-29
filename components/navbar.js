@@ -9,15 +9,13 @@ export default function Navbar() {
         src='/icons/menu-icon.png'
         alt="menu icon"
         width={50}
-        height={50}
-      />
+        height={50}/>
       <Image
         className={styles.hat}
         src='/icons/graduation-hat.png'
         alt="Graduation hat icon"
         width={50}
-        height={50}
-      />
+        height={50}/>
     </nav>
   )
 }
