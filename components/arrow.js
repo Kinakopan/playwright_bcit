@@ -6,7 +6,8 @@ export default function Arrow() {
     <div className={styles.arrowBox}>
       <button
         className={styles.arrowDown}
-        onClick={() => setUpArrowClicked(true)}>
+        onClick={() => setUpArrowClicked(true)}
+      >
         <Image
           src='/icons/upwardArrow.png'
           alt="Upward arrow icon"
@@ -17,7 +18,8 @@ export default function Arrow() {
 
       <button
         className={styles.arrowDown}
-        onClick={() => setDownArrowClicked(true)}>
+        onClick={() => setDownArrowClicked(true)}
+      >
         <Image
           src='/icons/downwardArrow.png'
           alt="Downward arrow icon"

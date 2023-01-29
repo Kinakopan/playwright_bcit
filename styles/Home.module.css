@@ -279,8 +279,6 @@
   }
 }
 
-
-
 /*****************************
 ******************************
             AUTHOR
@@ -313,7 +311,7 @@
   align-items: flex-end;
   position: fixed;
   width: fit-content;
-  height: 12%;
+  height: 9%;
   right: 8%;
   bottom: 10%;
 }
@@ -360,8 +358,11 @@
 }
 
 .btn:hover {
-  color: ;
   background: var(--primary-color);
+}
+
+.btn:hover .btn_text {
+  color: var(--quaternary-color);
 }
 
 /* From here - general */
@@ -561,7 +562,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 70%;
-  margin-top: 4%;
+  margin: 4% auto;
   padding: 3%;
   border: 2px solid var(--quaternary-color);
   line-height: 2.5;
@@ -596,4 +597,9 @@
   padding: 0 2%;
   font-size: 110%;
   color: var(--quinary-color);
+}
+
+.error {
+  color: #8f2121;
+  font-weight: 600;
 }

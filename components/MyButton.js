@@ -7,8 +7,7 @@ const MyButton = ({hrefLink = '', linkText = ''}) => {
     <Link
       href={hrefLink}
       className={styles.btn}>
-        {/* <span className={styles.btn_text}>{linkText}</span> */}
-        {linkText}
+        <span className={styles.btn_text}>{linkText}</span>
     </Link>
   );
 };
