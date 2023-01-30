@@ -12,23 +12,23 @@ export default function ContactForm() {
     const first = formRef.current.first.value;
     const last = formRef.current.last.value;
     const email = formRef.current.email.value;
-    // const pattern = /^[A-Za-z0-9]{1,}([A-Za-z0-9.!#$%&'*+-/=?^_`{|]+){0,}@[A-Za-z0-9.-]{1,253}\.[A-Z|a-z]{2,}$/;
-    const pattern = /^[A-Za-z0-9]{1,}([A-Za-z0-9.!#$%&'*+-/=?^_`{|]+){0,}@[A-Za-z0-9.-]{1,253}\.[A-Z|a-z]{2,}$/;
+    const pattern = /(^[A-Za-z0-9]+[A-Za-z0-9.!#$%&'*+-/=?^_`{|]{0,}){1,64}@[A-Za-z0-9.-]{1,253}.[A-Z|a-z]{2,}$/;
+    // == RULES ==
     //- Can't include Spaces, tabs, and newlines.
 
-    //1. Recipient name (Up to 64 characters long):
-      // Must start with one or more alphanumeric characters
-      // The special characters ( ! # $ % & ' * + - / = ? ^ _ ` { | ) are allowed, but must be surrounded by at least one alphanumeric character on both sides.
+    //1. Recipient name (At least 1 and up to 64 characters long):
+      // - Must start with one or more alphanumeric characters
+      // - The special characters ( ! # $ % & ' * + - / = ? ^ _ ` { | ) are allowed, but must not be the first letter in the email address..
 
     //2. Must contain @ symbol
 
-    //3. Domain name (Up to 253 characters long):
-      // Must contain one or more alphanumeric, 0-9, or ( - . )
+    //3. Domain name (At least 1 and up to 253 characters long):
+      // - Must contain one or more alphanumeric, 0-9, or ( - . )
 
     //4. Must contain a dot
 
     //5. Top-level domain:
-      // Must contain at least 2 alphabetical characters.
+      // - Must contain at least 2 alphabetical characters.
 
      //References for email address rules:
       //https://knowledge.validity.com/hc/en-us/articles/220560587-What-are-the-rules-for-email-address-syntax-
