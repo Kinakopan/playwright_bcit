@@ -391,7 +391,7 @@
   background-position: center;
   background-repeat: no-repeat;
   line-height: 1.5;
-  font-family: 'Hind Guntur', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   vertical-align: text-bottom;
   font-weight: 100;
   text-align: left;
@@ -429,7 +429,7 @@
 .body_home .cont_main {
   display: flex;
   flex-direction: column;
-  width: 44%;
+  width: 40%;
 }
 
 .body_home .cont_main * {
@@ -437,13 +437,12 @@
 }
 
 .body_home .text_lead {
-  font-family: 'Myriad Pro', sans-serif;
   font-size: 3.1rem;
   line-height: 1.3;
   padding-bottom: .5em;
   margin-bottom: .5em;
   border-bottom: 4px solid;
-  border-image: linear-gradient(to right, rgba(244,214,185,1) 0%, rgba(244,214,185,1) 66%, rgba(244,214,185,0) 66%, rgba(244,214,185,0) 100%) 1;
+  border-image: linear-gradient(to right, rgba(244,214,185,1) 0%, rgba(244,214,185,1) 72%, rgba(244,214,185,0) 72%, rgba(244,214,185,0) 100%) 1;
 }
 
 .body_home .box_btn {

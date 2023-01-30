@@ -16,8 +16,6 @@ export default function About() {
 
           {/* Main contents under nav bar */}
           <main className={styles.main}>
-            {/* About Us */}
-            {/* <h1 className={styles.text_heading1}>About Us</h1> */}
 
             <HeadingLine headingText="About Us"/>
 
