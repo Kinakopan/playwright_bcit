@@ -1,6 +1,7 @@
-import Link from 'next/link';
 import styles from "@/styles/Home.module.css";
 import React, { useState, useRef } from "react";
+import Link from 'next/link';
+import MyButton from '/components/MyButton';
 
 export default function ContactForm() {
   const [errors, setErrors] = useState({ first: "", last: "", email: "" });
@@ -93,7 +94,7 @@ export default function ContactForm() {
         </fieldset>
       </form>
 
-      {isFormValid && <button className={styles.btn_submit}><Link className={styles.text_submit} href="/">Submit</Link></button>}
+      {isFormValid && <MyButton hrefLink='/' linkText='Submit'/>}
 
       <div>
         {Object.entries(errors).map(([key, error]) => {

@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from '@/styles/Home.module.css';
+import React from 'react';
 
 const HeadingLine = ({headingTag = 'h1', headingText = ''}) => {
   return (

@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
+import { Inter } from '@next/font/google';
 import Arrow from '/components/Arrow';
 import Navbar from '/components/Navbar';
 import MyButton from '/components/MyButton';
-import { Inter } from '@next/font/google';
 
 const inter = Inter({ subsets: ['latin'] })
 

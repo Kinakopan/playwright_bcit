@@ -1,12 +1,13 @@
-import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Arrow() {
+export default function Arrow({upHref = '/about', downHref = '/about'}) {
   return (
     <div className={styles.arrowBox}>
-      <button
-        className={styles.arrowDown}
-        onClick={() => setUpArrowClicked(true)}
+      <Link
+        className={styles.arrowUp}
+        href={upHref}
       >
         <Image
           src='/icons/upwardArrow.png'
@@ -14,11 +15,11 @@ export default function Arrow() {
           width={50}
           height={50}
         />
-      </button>
+      </Link>
 
-      <button
+      <Link
         className={styles.arrowDown}
-        onClick={() => setDownArrowClicked(true)}
+        href={downHref}
       >
         <Image
           src='/icons/downwardArrow.png'
@@ -26,7 +27,7 @@ export default function Arrow() {
           width={50}
           height={50}
         />
-      </button>
+      </Link>
     </div>
   )
 }

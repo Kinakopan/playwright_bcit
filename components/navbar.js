@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -7,13 +7,13 @@ export default function Navbar() {
       <Image
         className={styles.burgar}
         src='/icons/menu-icon.png'
-        alt="menu icon"
+        alt="Menu icon"
         width={50}
         height={50}/>
       <Image
         className={styles.hat}
         src='/icons/graduation-hat.png'
-        alt="Graduation hat icon"
+        alt="Graduation hat logo"
         width={50}
         height={50}/>
     </nav>
