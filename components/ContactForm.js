@@ -12,7 +12,27 @@ export default function ContactForm() {
     const first = formRef.current.first.value;
     const last = formRef.current.last.value;
     const email = formRef.current.email.value;
-    const pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+    // const pattern = /^[A-Za-z0-9]{1,}([A-Za-z0-9.!#$%&'*+-/=?^_`{|]+){0,}@[A-Za-z0-9.-]{1,253}\.[A-Z|a-z]{2,}$/;
+    const pattern = /^[A-Za-z0-9]{1,}([A-Za-z0-9.!#$%&'*+-/=?^_`{|]+){0,}@[A-Za-z0-9.-]{1,253}\.[A-Z|a-z]{2,}$/;
+    //- Can't include Spaces, tabs, and newlines.
+
+    //1. Recipient name (Up to 64 characters long):
+      // Must start with one or more alphanumeric characters
+      // The special characters ( ! # $ % & ' * + - / = ? ^ _ ` { | ) are allowed, but must be surrounded by at least one alphanumeric character on both sides.
+
+    //2. Must contain @ symbol
+
+    //3. Domain name (Up to 253 characters long):
+      // Must contain one or more alphanumeric, 0-9, or ( - . )
+
+    //4. Must contain a dot
+
+    //5. Top-level domain:
+      // Must contain at least 2 alphabetical characters.
+
+     //References for email address rules:
+      //https://knowledge.validity.com/hc/en-us/articles/220560587-What-are-the-rules-for-email-address-syntax-
+      //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
     const updatedErrors = {...errors};
 
