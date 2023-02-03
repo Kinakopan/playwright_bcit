@@ -1,9 +1,9 @@
 import styles from "@/styles/Home.module.css";
 import { Inter } from "@next/font/google";
-import Arrow from "/components/Arrow";
-import Navbar from "/components/Navbar";
-import HeadingLine from "/components/HeadingLine";
-import Carousel from "/components/Carousel";
+import Arrow from "@/components/Arrow";
+import Navbar from "@/components/Navbar";
+import HeadingLine from "@/components/HeadingLine";
+import Carousel from "@/components/Carousel";
 
 const inter = Inter({ subsets: ["latin"] });
 

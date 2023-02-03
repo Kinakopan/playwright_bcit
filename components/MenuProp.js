@@ -1,37 +1,35 @@
-import styles from '@/styles/Home.module.css';
+import styles from "@/styles/Home.module.css";
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
-const MenuProp = () => {
-  const [popup, setPopup] = useState(false);
+const MenuProp = ({ visible, setMenuVisible }) => {
+
+  const closeMenu = () => {
+    setMenuVisible(false);
+  };
 
   return (
     <>
-      <h1 onClick={() => setPopup(!popup)}>x</h1>
-      {popup ? (
+      {visible &&
         <div
-          className={styles.memuPropBg}
+          className={styles.menuPropWrapper}
           style={{backgroundImage: `url(/background-images/menuBackground.png)`}}>
-          <ul>
+          <h1
+            className={styles.menuPopupX}
+            onClick={closeMenu}>x</h1>
+          <ul className={styles.memuPropList}>
             <li>
-              <Link href="/">
-                Home
-              </Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">
-                About
-              </Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="/contact">
-                Contact
-              </Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
-      ) : null}
+      }
     </>
   );
 };

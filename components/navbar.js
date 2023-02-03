@@ -1,19 +1,14 @@
 import styles from '@/styles/Home.module.css';
+import MenuProp from '@/components/MenuProp';
 import React, { useState } from "react";
 import Image from 'next/image';
-import MenuProp from '/components/MenuProp';
 
 export default function Navbar() {
 
-  const [menuProp, setMenuProp] = useState({
-    popup: false,
-  });
+  const [menuVisible, setMenuVisible] = useState(false);
 
-  const togglePopup = () => {
-    setMenuProp({
-      ...menuProp,
-      popup: !menuProp.popup
-    });
+    const openMenu = () => {
+    setMenuVisible(true);
   };
 
   return (
@@ -24,9 +19,12 @@ export default function Navbar() {
         alt="Menu icon"
         width={50}
         height={50}
-        onClick={togglePopup}/>
+        onClick={openMenu}/>
 
-      <MenuProp popup={menuProp.popup} />
+      <MenuProp
+        visible={menuVisible}
+        setMenuVisible={setMenuVisible}
+      />
 
       <Image
         className={styles.hat}

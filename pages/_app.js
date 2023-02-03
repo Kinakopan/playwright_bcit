@@ -1,5 +1,5 @@
-import '../styles/globals.css'
-import '../styles/variables.css'
+import '@/styles/globals.css'
+import '@/styles/variables.css'
 import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {

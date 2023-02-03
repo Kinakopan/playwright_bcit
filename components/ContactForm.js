@@ -1,7 +1,6 @@
 import styles from "@/styles/Home.module.css";
+import MyButton from '@/components/MyButton';
 import React, { useState, useRef } from "react";
-import Link from 'next/link';
-import MyButton from '/components/MyButton';
 
 export default function ContactForm() {
   const [errors, setErrors] = useState({ first: "", last: "", email: "" });

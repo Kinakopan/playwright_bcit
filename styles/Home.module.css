@@ -295,11 +295,44 @@
   justify-content: space-between;
   width: 100%;
   padding: 3% 8% 0 8%;
+  position: relative;
 }
 
 .burgar,
 .hat {
   width: fit-content;
+}
+
+.menuPropWrapper {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 5rem 7rem;
+}
+
+.menuPopupX {
+  font-size: 3rem;
+}
+
+.memuPropList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-left: calc(100% - 6rem);
+}
+
+.memuPropBg {
+  list-style-type: none;
 }
 
 /* From here - components/arrow.js */
@@ -374,7 +407,7 @@
   color: var(--quaternary-color);
 }
 
- .btn_text {
+.btn_text {
   vertical-align: text-bottom;
 }
 

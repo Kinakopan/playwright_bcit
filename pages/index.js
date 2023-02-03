@@ -1,8 +1,8 @@
 import styles from '@/styles/Home.module.css';
 import { Inter } from '@next/font/google';
-import Arrow from '/components/Arrow';
-import Navbar from '/components/Navbar';
-import MyButton from '/components/MyButton';
+import Arrow from '@/components/Arrow';
+import Navbar from '@/components/Navbar';
+import MyButton from '@/components/MyButton';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +11,6 @@ export default function Home() {
     <>
       <div
         className={`${styles.body} ${styles.body_home}`}
-        // style={{backgroundImage: `url(${bgImg})`}}
         style={{backgroundImage: `url(/background-images/backgroundMountain.jpg)`}}
       >
         <div className={styles.wrapper}>
