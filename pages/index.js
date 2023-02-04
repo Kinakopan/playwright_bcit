@@ -33,7 +33,7 @@ export default function Home() {
                 />
                 <MyButton
                   hrefLink="contact"
-                  linkText="Constact Us"
+                  linkText="Contact Us"
                 />
               </div>
             </div>

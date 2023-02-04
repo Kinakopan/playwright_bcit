@@ -10,15 +10,6 @@ const words = [
   { id: 4, value: 'Engage With Respect' }
 ]
 
-const path = className => {
-  if (className.includes(styles.carousel_prevBtn)) {
-    return "/icons/leftArrow.png";
-  }
-  if (className.includes(styles.carousel_nextBtn)) {
-    return "/icons/rightArrow.png";
-  }
-};
-
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -80,8 +71,7 @@ const Carousel = () => {
         >
           <Image
             className={styles.carousel_arrow}
-            // src="/icons/leftArrow.png"
-            src={path(styles.carousel_prevBtn)}
+            src="/icons/leftArrow.png"
             alt="Arrow icon to show the previous slide"
             width={60}
             height={60}
@@ -93,8 +83,7 @@ const Carousel = () => {
         >
           <Image
             className={styles.carousel_arrow}
-            // src="/icons/rightArrow.png"
-            src={path(styles.carousel_nextBtn)}
+            src="/icons/rightArrow.png"
             alt="Arrow icon to show the next slide"
             width={60}
             height={60}
