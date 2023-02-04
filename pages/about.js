@@ -36,14 +36,14 @@ export default function About() {
               <h3 className={styles.text_heading2}>Information Sessions</h3>
 
               <p className={styles.text_body}>
-                Information Sessions are a simple way to figure out the next step along your career path.<br/>
+                Information Sessions are a simple way to figure out the next step along your career path. <br className={styles.pc}/>
                 Learn more about the programs that interest you.
               </p>
 
               <h3 className={styles.text_heading2}>Big Info</h3>
 
               <p className={styles.text_body}>
-                Big Info is the largest program expo and information session at BCIT. It’s your chance to find out about all our programs – from business, computing, and health to engineering, trades,<br/>and applied sciences.
+                Big Info is the largest program expo and information session at BCIT. It’s your chance to find out about all our programs – from business, computing, and health to engineering, trades,<br className={styles.pc}/> and applied sciences.
               </p>
 
               <p  className={styles.text_body}>
