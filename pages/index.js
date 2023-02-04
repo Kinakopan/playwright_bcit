@@ -20,26 +20,26 @@ export default function Home() {
           {/* Main contents under nav bar */}
           <main className={styles.main}>
             <div className={styles.cont_main}>
-              <h2 className={styles.text_lead}>
+              <h1 className={styles.text_lead}>
                 An investment in knowledge pays the best interest.
-              </h2>
+              </h1>
               <p className={styles.text_body}>
-                Different than a college or university, the British Columbia Institute of Technology offers paractical, flexible, applied education with instructors who have direct, hands-on experience in their field.
+                Different than a college or university, the British Columbia Institute of Technology offers practical, flexible, applied education with instructors who have direct, hands-on experience in their field.
               </p>
               <div className={styles.box_btn}>
                 <MyButton
-                  hrefLink="/about"
+                  hrefLink="about"
                   linkText="More About Us"
                 />
                 <MyButton
-                  hrefLink="/contact"
+                  hrefLink="contact"
                   linkText="Constact Us"
                 />
               </div>
             </div>
           </main>
 
-          <Arrow/>
+          <Arrow page="index"/>
 
         </div>
       </div>

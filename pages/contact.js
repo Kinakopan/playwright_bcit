@@ -18,7 +18,7 @@ export default function Contact() {
           <Navbar />
 
           {/* Main contents under nav bar */}
-          <main className={styles.main}>
+          <div className={styles.main}>
             <HeadingLine headingText="Contact Us"/>
 
             <p className={styles.text_body}>
@@ -26,9 +26,9 @@ export default function Contact() {
             </p>
 
             <ContactForm/>
-          </main>
+          </div>
 
-          <Arrow/>
+          <Arrow page="contact"/>
         </div>
       </div>
     </>

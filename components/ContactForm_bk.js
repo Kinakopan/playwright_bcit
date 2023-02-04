@@ -70,71 +70,46 @@ export default function ContactForm() {
         ref={formRef}
         className={styles.form}
       >
-        <fieldset
-          className={`${styles.fieldset} ${styles.fieldset_firstName}`}
-        >
-          <table>
-            <thead>
-              <tr>
-                <th
-                  className={styles.label}
-                  for="first">
-                    First Name
-                </th>
-                <th
-                  className={styles.label}
-                  for="email">
-                    Last Name
-                </th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="2">Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input
-                    type="text"
-                    id="first"
-                    name="first"
-                    placeholder="First Name Here"
-                    onChange={handleChange}
-                  />
-                  <div className={styles.error}>
-                      {errors.first}
-                  </div>
-                </td>
-                <td>
-                  <input
-                    type="text"
-                    id="last" name="last"
-                    placeholder="Last Name Here"
-                    onChange={handleChange}
-                  />
-                  <div className={styles.error}>
-                    {errors.last}
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email Here"
-                    onChange={handleChange}
-                  />
-                  <div className={styles.error}>
-                    {errors.email}
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <fieldset className={`${styles.fieldset} ${styles.fieldset_firstName}`}>
+          <label className={styles.label} for="first">
+            First Name:
+          </label>
+          <input
+            className={styles.input}
+            type="text"
+            id="first"
+            name="first"
+            placeholder="First Name Here"
+            onChange={handleChange}
+          />
+        </fieldset>
+
+        <fieldset className={`${styles.fieldset} ${styles.fieldset_lastName}`}>
+          <label className={styles.label} for="last">
+            Last Name:
+          </label>
+          <input
+            className={styles.input}
+            type="text"
+            id="last"
+            name="last"
+            placeholder="Last Name Here"
+            onChange={handleChange}
+          />
+        </fieldset>
+
+        <fieldset className={`${styles.fieldset} ${styles.fieldset_email}`}>
+          <label className={styles.label} for="email">
+            Email:
+          </label>
+          <input
+            className={styles.input}
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Here"
+            onChange={handleChange}
+          />
         </fieldset>
       </form>
 

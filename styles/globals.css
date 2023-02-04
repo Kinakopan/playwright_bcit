@@ -115,13 +115,14 @@ a {
 /* From here - Scrollbar */
 /* track */
 ::-webkit-scrollbar {
-  width: 18px;
-  height: 18px;
+  width: .5rem;
+  height: 100vh;
   background-color: var(--ternary-color);
 }
 /* thumb */
 ::-webkit-scrollbar-thumb {
   border-radius: 20px;
+  height: 50vh;
   background-color: var(--primary-color);
 }
 /*  thumb:hover */

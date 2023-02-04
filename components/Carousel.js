@@ -10,6 +10,15 @@ const words = [
   { id: 4, value: 'Engage With Respect' }
 ]
 
+const path = className => {
+  if (className.includes(styles.carousel_prevBtn)) {
+    return "/icons/leftArrow.png";
+  }
+  if (className.includes(styles.carousel_nextBtn)) {
+    return "/icons/rightArrow.png";
+  }
+};
+
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
@@ -23,8 +32,31 @@ const Carousel = () => {
   }, [currentSlide])
 
   return (
-    <div className={styles.carousel_cont}>
-      <div className={styles.carousel_wrapper}>
+    <div
+      className={styles.carousel_cont}
+      id="carouselImage"
+      style= {{
+        height: "200px",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        margin: "40px 0px",
+        padding: "10px",
+      }}
+      >
+      <span
+        id="testOnImageHere"
+        style={{
+          backgroundColor: "rgba(16, 46, 53, 0.5)",
+          padding: "10px",
+          margin: "0px 50px",
+        }}
+        />
+      <div
+        className={styles.carousel_wrapper}
+        >
         {words.map(word => (
           <div
             key={word.id}
@@ -36,10 +68,10 @@ const Carousel = () => {
         ))}
 
         {words.map(word => (
-          <p
+          <span
             key={word.id}
             className={`${styles.carousel_text} ${styles.carousel_position} ${currentSlide === word.id ? styles.carousel_active : ''}`}
-          >{word.value}</p>
+          >{word.value}</span>
         ))}
 
         <button
@@ -48,7 +80,8 @@ const Carousel = () => {
         >
           <Image
             className={styles.carousel_arrow}
-            src="/icons/leftArrow.png"
+            // src="/icons/leftArrow.png"
+            src={path(styles.carousel_prevBtn)}
             alt="Arrow icon to show the previous slide"
             width={60}
             height={60}
@@ -60,7 +93,8 @@ const Carousel = () => {
         >
           <Image
             className={styles.carousel_arrow}
-            src="/icons/rightArrow.png"
+            // src="/icons/rightArrow.png"
+            src={path(styles.carousel_nextBtn)}
             alt="Arrow icon to show the next slide"
             width={60}
             height={60}
