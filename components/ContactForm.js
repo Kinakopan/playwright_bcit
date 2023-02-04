@@ -11,7 +11,7 @@ export default function ContactForm() {
     const first = formRef.current.first.value;
     const last = formRef.current.last.value;
     const email = formRef.current.email.value;
-    const pattern = /(^[A-Za-z0-9]+[A-Za-z0-9.!#$%&'*+-/=?^_`{|]{0,}){1,64}@[A-Za-z0-9.-]{1,253}.[A-Z|a-z]{2,}$/;
+    const pattern = /(^[A-Za-z0-9]+[A-Za-z0-9.!#$%&'*+-/=?^_`{|]{0,}){1,64}@[A-Za-z0-9.-]{1,253}\.[A-Z|a-z]{2,}$/;
     // == RULES ==
     //- Can't include Spaces, tabs, and newlines.
 
@@ -24,10 +24,10 @@ export default function ContactForm() {
     //3. Domain name (At least 1 and up to 253 characters long):
       // - Must contain one or more alphanumeric, 0-9, or ( - . )
 
-    //4. Must contain a dot
+    //4. Must contain a dot in front of the last 2 more more alphabetic character(s)
 
     //5. Top-level domain:
-      // - Must contain at least 2 alphabetical characters.
+      // - Must contain at least 2 alphabetic characters.
 
      //References for email address rules:
       //https://knowledge.validity.com/hc/en-us/articles/220560587-What-are-the-rules-for-email-address-syntax-

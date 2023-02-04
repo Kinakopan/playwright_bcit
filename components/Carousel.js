@@ -44,6 +44,7 @@ const Carousel = () => {
             onClick={() => setCurrentSlide((currentSlide - 1 + images.length) % images.length)}
             >
             <Image
+              className={styles.carousel_arrow}
               src="/icons/leftArrow.png"
               alt="Arrow icon to show the previous slide"
               width={60}
@@ -55,6 +56,7 @@ const Carousel = () => {
             onClick={() => setCurrentSlide((currentSlide + 1) % images.length)}
             >
             <Image
+              className={styles.carousel_arrow}
               src="/icons/rightArrow.png"
               alt="Arrow icon to show the next slide"
               width={60}

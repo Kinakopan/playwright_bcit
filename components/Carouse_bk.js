@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
 import styles from "@/styles/Home.module.css";
+import React, { useState } from 'react'
 import Image from 'next/image'
 
-const MyCarousel = () => {
+const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const images = [
       '/carousel-images/0.jpg',
@@ -35,30 +35,32 @@ const MyCarousel = () => {
           {texts.map((text, index) => (
             <p
               key={index}
-              className={`${styles.carousel_text} ${currentSlide === index ? styles.carousel_active : ''}`}
+              className={`${styles.carousel_text} ${styles.carousel_position} ${currentSlide === index ? styles.carousel_active : ''}`}
             >{text}</p>
           ))}
 
           <button
-            className={styles.carousel_prevBtn}
+            className={`${styles.carousel_prevBtn} ${styles.carousel_position}`}
             onClick={() => setCurrentSlide((currentSlide - 1 + images.length) % images.length)}
             >
             <Image
+              className={styles.carousel_arrow}
               src="/icons/leftArrow.png"
               alt="Arrow icon to show the previous slide"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
             />
           </button>
           <button
-            className={styles.carousel_nextBtn}
+            className={`${styles.carousel_nextBtn} ${styles.carousel_position}`}
             onClick={() => setCurrentSlide((currentSlide + 1) % images.length)}
             >
             <Image
+              className={styles.carousel_arrow}
               src="/icons/rightArrow.png"
               alt="Arrow icon to show the next slide"
-              width={80}
-              height={80}
+              width={60}
+              height={60}
             />
           </button>
         </div>
@@ -66,4 +68,4 @@ const MyCarousel = () => {
   )
 }
 
-export default MyCarousel
+export default Carousel

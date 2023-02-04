@@ -10,10 +10,11 @@ export default function Arrow({upHref = '/about', downHref = '/about'}) {
         href={upHref}
       >
         <Image
+          className={styles.arrowUp_img}
           src='/icons/upwardArrow.png'
           alt="Upward arrow icon"
           width={50}
-          height={50}
+          height={60}
         />
       </Link>
 
@@ -22,10 +23,11 @@ export default function Arrow({upHref = '/about', downHref = '/about'}) {
         href={downHref}
       >
         <Image
+          className={styles.arrowDown_img}
           src='/icons/downwardArrow.png'
           alt="Downward arrow icon"
           width={50}
-          height={50}
+          height={60}
         />
       </Link>
     </div>
