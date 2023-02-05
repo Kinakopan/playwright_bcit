@@ -34,17 +34,8 @@ const Carousel = () => {
         justifyContent: "center",
         alignItems: "center",
         margin: "40px 0px",
-        padding: "10px",
       }}
       >
-      <span
-        id="testOnImageHere"
-        style={{
-          backgroundColor: "rgba(16, 46, 53, 0.5)",
-          padding: "10px",
-          margin: "0px 50px",
-        }}
-        />
       <div
         className={styles.carousel_wrapper}
         >
@@ -58,12 +49,22 @@ const Carousel = () => {
           />
         ))}
 
-        {words.map(word => (
-          <span
-            key={word.id}
-            className={`${styles.carousel_text} ${styles.carousel_position} ${currentSlide === word.id ? styles.carousel_active : ''}`}
-          >{word.value}</span>
-        ))}
+        <span
+        id="testOnImageHere"
+        className={styles.testOnImageHere}
+        style={{
+          backgroundColor: "rgba(16, 46, 53, 0.5)",
+          padding: "10px",
+          margin: "0px 50px",
+        }}
+        >
+          {words.map(word => (
+            <span
+              key={word.id}
+              className={`${styles.carousel_text} ${currentSlide === word.id ? styles.carousel_active : ''}`}
+            >{word.value}</span>
+          ))}
+        </span>
 
         <button
           className={`${styles.carousel_prevBtn} ${styles.carousel_position}`}

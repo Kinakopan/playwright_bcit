@@ -2,6 +2,15 @@ import '@/styles/globals.css'
 import '@/styles/variables.css'
 import Head from 'next/head'
 
+function getAbsolutePath(path) {
+  if (path[0] === "/") {
+    return path;
+  } else {
+    return "/" + path;
+  }
+}
+
+
 const setTitle = (fileName) => {
   let title;
   if (fileName === "index") {

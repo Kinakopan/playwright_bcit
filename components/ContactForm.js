@@ -71,66 +71,66 @@ export default function ContactForm() {
         className={styles.form}
       >
         <fieldset
-          className={`${styles.fieldset} ${styles.fieldset_firstName}`}
+          className={styles.fieldset}
         >
           <table>
             <thead>
               <tr>
                 <th
-                  className={styles.label}
+                  className={`${styles.th} ${styles.th_firstName}`}
                   for="first">
                     First Name
                 </th>
                 <th
-                  className={styles.label}
-                  for="email">
+                  className={`${styles.th} ${styles.th_lastName}`}
+                  for="last">
                     Last Name
                 </th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="2">Email</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
                   <input
+                    className={styles.input}
                     type="text"
-                    id="first"
+                    id="firstName"
                     name="first"
                     placeholder="First Name Here"
                     onChange={handleChange}
                   />
-                  <div className={styles.error}>
-                      {errors.first}
-                  </div>
                 </td>
                 <td>
                   <input
+                    className={styles.input}
                     type="text"
-                    id="last" name="last"
+                    id="lastName"
+                    name="last"
                     placeholder="Last Name Here"
                     onChange={handleChange}
                   />
-                  <div className={styles.error}>
-                    {errors.last}
-                  </div>
                 </td>
               </tr>
+            </tbody>
+            <thead>
               <tr>
-                <td>
+                <th
+                  colspan="2"
+                  className={`${styles.th} ${styles.th_email}`}
+                  for="email">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">
                   <input
+                    className={styles.input}
                     type="email"
                     id="email"
                     name="email"
                     placeholder="Email Here"
                     onChange={handleChange}
                   />
-                  <div className={styles.error}>
-                    {errors.email}
-                  </div>
                 </td>
               </tr>
             </tbody>
@@ -140,7 +140,7 @@ export default function ContactForm() {
 
       {isFormValid && <MyButton hrefLink='/' linkText='Submit'/>}
 
-      <div>
+      <div className={styles.cont_error}>
         {Object.entries(errors).map(([key, error]) => {
           if (error !== "" && formRef.current[key].value !== "") {
             return <p className={styles.error}>{error}</p>;

@@ -347,6 +347,7 @@
   .menuPropWrapper {
     width: 75%;
     padding: 2rem 6rem 3rem 3rem;
+    gap: 30%;
   }
 }
 
@@ -451,7 +452,7 @@
 @media (max-width: 1000px) {
   .text_heading1 {
     width: 85vw;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
   }
   .body_about .cont_section1 .text_heading1 {
     padding-bottom: 20%;
@@ -685,6 +686,7 @@
 .body_home .box_btn {
   display: flex;
   flex-direction: row;
+  gap: .5rem;
   margin-top: 4%;
 }
 
@@ -775,8 +777,6 @@
   display: flex;
   align-self: center;
   margin-top: 5%;
-  /* height: 200px; */
-  /* padding-top: 35%; */
   overflow: hidden;
   position: relative;
 }
@@ -785,7 +785,6 @@
   .carousel_cont {
     width: 40%;
     margin-top: 7%;
-    /* padding-top: 20%; */
   }
 }
 /* Tablet (ipad Air) between 600px and 1000px */
@@ -793,14 +792,12 @@
   .carousel_cont {
     width: 60%;
     margin-top: 13%;
-    /* padding-top: 30%; */
   }
 }
 /* Mobile (iphone XR) under 600px */
 @media (max-width: 600px) {
   .carousel_cont {
     width: 100%;
-    /* padding-top: 57%; */
   }
 }
 
@@ -828,12 +825,17 @@
   transform: translateY(-50%);
 }
 
+.testOnImageHere {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 50px), -50%);
+  z-index: 100;
+}
+
 .carousel_text {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rgba(16, 46, 53, 0.5); */
-  padding: .8em .5em .5em;
+  white-space: nowrap;
 }
 
 .carousel_slide:not(.carousel_active),
@@ -873,36 +875,33 @@
 ============================*/
 .cont_form {
   display: flex;
+  width: 70%;
   flex-direction: column;
   align-items: flex-end;
+  margin: 0 auto;
+}
+/* Tablet (ipad Air) between 600px and 1000px */
+@media (max-width: 1000px) {
+  .cont_form {
+    margin: 8% auto;
+  }
 }
 /* Mobile (iphone XR) under 600px */
 @media (max-width: 600px) {
-  .form {
+  .cont_form {
     width: 100%;
   }
 }
 
 .form {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 5% auto;
+  justify-content: center;
+  margin: 5% 0;
   padding: 3%;
   border: 2px solid var(--quaternary-color);
   line-height: 2.5;
-}
-/* Desktop over 1000px */
-@media (min-width: 1001px) {
-  .form {
-    min-width: 60%;
-  }
-}
-/* Tablet (ipad Air) between 600px and 1000px */
-@media (max-width: 1000px) {
-  .form {
-    min-width: 100%;
-    margin: 10% auto;
-  }
 }
 /* Mobile (iphone XR) under 600px */
 @media (max-width: 600px) {
@@ -912,25 +911,22 @@
 }
 
 .fieldset {
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: none;
 }
 
-.fieldset_firstName {
-  margin-right: 1%;
+.th {
+  font-weight: 600;
 }
 
-.fieldset:not(.fieldset_email) {
+.th:not(.th_email) {
   width: 49%;
 }
 
-.fieldset_email {
-  width: 100%;
-}
-
-.label {
-  font-weight: 600;
+.th + .th {
+  margin-left: 1%;
 }
 
 .input {
@@ -954,6 +950,13 @@
 
 .input::placeholder {
   color: var(--quinary-color);
+}
+
+.cont_error {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .error {

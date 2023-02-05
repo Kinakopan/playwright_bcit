@@ -1,7 +1,5 @@
 import styles from '@/styles/Home.module.css';
 import React from 'react';
-// import Link from 'next/link';
-// import { setTitle } from '@/pages/_app';
 
 const MyButton = ({hrefLink = '', linkText = ''}) => {
   const handleClick = () => {

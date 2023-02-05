@@ -71,10 +71,10 @@ test.describe('Carousel area', () => {
     test('Carousel Arrows', async({ page }) => {
         await page.goto(urlAbout)
 
-        await page.screenshot({ path: '/icons/leftArrow.png'})
+        await page.screenshot({ path: './icons/leftArrow.png'})
 
 
-        await page.screenshot({ path: '/icons/rightArrow.png'})
+        await page.screenshot({ path: './icons/rightArrow.png'})
     })
 
     test('Carousel main container area stylizing', async({ page }) => {
