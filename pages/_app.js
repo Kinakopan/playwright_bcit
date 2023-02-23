@@ -25,7 +25,7 @@ const [title, setTitle] = useState('')
 //   return title;
 // };
 
-function setTitle(fileName) {
+function settingtitle(fileName) {
   setTitle(fileName);
 
   let title;
