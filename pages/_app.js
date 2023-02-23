@@ -39,13 +39,19 @@ function setTitle(fileName) {
   return title;
 };
 
+  console.log('Outside function fileName is ', fileName, 'Outside function title is ', title)
+
 export default function App({ Component, pageProps }) {
 
   const fileName = Component.displayName || Component.name || 'Unknown';
 
   const title = (fileName.toLowerCase() === 'home') ? 'Home' : setTitle(fileName.toLowerCase());
 
-  console.log('fileName is ', fileName, 'title is ', title)
+  console.log('Inside fileName is ', fileName, 'Inside title is ', title)
+
+  console.log('Inside Component.displayName is ', Component.displayName, 'Inside Component.name is ', Component.name)
+
+  console.log('Inside Component is ', Component, 'Inside function pageProps is ', pageProps)
 
   return (
     <>
