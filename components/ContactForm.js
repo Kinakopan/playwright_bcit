@@ -115,14 +115,16 @@ export default function ContactForm() {
             <thead>
               <tr>
                 <th
-                  colspan="2"
+                  // colspan="2"
                   className={`${styles.th} ${styles.th_email}`}
                   for="email">Email</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td colspan="2">
+                <td
+                  // colspan="2"
+                  >
                   <input
                     className={styles.input}
                     type="email"

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem;
   min-height: 100vh;
 }
 
@@ -445,23 +445,23 @@
 @media (min-width: 1001px) {
   .text_heading1 {
     width: 75vw;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
   }
 }
 /* Tablet (ipad Air) between 600px and 1000px */
 @media (max-width: 1000px) {
   .text_heading1 {
     width: 85vw;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
   }
   .body_about .cont_section1 .text_heading1 {
-    padding-bottom: 20%;
+    padding-bottom: 15%;
   }
 }
 /* Mobile (iphone XR) under 600px */
 @media (max-width: 600px) {
   .body_about .cont_section1 .text_heading1 {
-    padding: 10% 0 30%;
+    padding: 10% 0 20%;
   }
 }
 

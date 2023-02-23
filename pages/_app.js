@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
         <meta name="author" content="MDIA 2109" />
         <meta property="og:title" content={`Assignment #1 - ${title} Page`}/>
         <meta property="og:description" content="BCIT Digital Design and Development Diploma"/>
-        <link rel="icon" type="image/png" href="/favicon.png"/>
+        <link rel="icon" type="image/png" href="/favicon.ico"/>
       </Head>
 
       <Component {...pageProps} />

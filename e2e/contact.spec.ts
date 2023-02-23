@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-let urlHome = "http://localhost:3000";
-let urlAbout = "http://localhost:3000/about";
-let urlContact = "http://localhost:3000/contact";
+let urlHome = "https://playwright-bcit.vercel.app";
+let urlAbout = "https://playwright-bcit.vercel.app/about";
+let urlContact = "https://playwright-bcit.vercel.app/contact";
 
 test.beforeAll(async () => {
     console.log('Before tests');
