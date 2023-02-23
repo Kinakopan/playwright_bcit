@@ -10,7 +10,6 @@ function getAbsolutePath(path) {
   }
 }
 
-
 const setTitle = (fileName) => {
   let title;
   if (fileName === "index") {
@@ -22,8 +21,6 @@ const setTitle = (fileName) => {
   }
   return title;
 };
-
-console.log('fileName is ', fileName, 'title is ', title)
 
 export default function App({ Component, pageProps }) {
 
