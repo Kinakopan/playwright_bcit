@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import HeadingLine from "@/components/HeadingLine";
 import ContactForm from "@/components/ContactForm";
 
-export default function Contact() {
+export default function Contact({contact}) {
   return (
     <>
       <div
