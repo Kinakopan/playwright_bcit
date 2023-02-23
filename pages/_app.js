@@ -23,7 +23,7 @@ const setTitle = (fileName) => {
   return title;
 };
 
-console.log('path is ', path, 'fileName is ', fileName, 'title is ', title)
+console.log('fileName is ', fileName, 'title is ', title)
 
 export default function App({ Component, pageProps }) {
 
