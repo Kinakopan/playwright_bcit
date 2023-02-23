@@ -11,23 +11,8 @@ function getAbsolutePath(path) {
   }
 }
 
-// const [title, setTitle] = useState('')
 
-// const setTitle = (fileName) => {
-//   let title;
-//   if (fileName === "index") {
-//     title = 'Home';
-//   } else if (fileName === "about") {
-//     title = 'About Us';
-//   } else if (fileName === "contact") {
-//     title = 'Contact Us';
-//   }
-//   return title;
-// };
-
-// function settingtitle(fileName) {
-  setTitle(fileName);
-
+const setTitle = (fileName) => {
   let title;
   if (fileName === "index") {
     title = 'Home';
@@ -37,15 +22,15 @@ function getAbsolutePath(path) {
     title = 'Contact Us';
   }
   return title;
-// };
-
-  console.log('Outside function fileName is ', fileName, 'Outside function title is ', title)
+};
 
 export default function App({ Component, pageProps }) {
 
   const fileName = Component.displayName || Component.name || 'Unknown';
 
   const title = (fileName.toLowerCase() === 'home') ? 'Home' : setTitle(fileName.toLowerCase());
+
+  console.log('fileName is ', fileName, 'title is ', title)
 
   console.log('Inside fileName is ', fileName, 'Inside title is ', title)
 
