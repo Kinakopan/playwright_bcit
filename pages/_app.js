@@ -11,7 +11,7 @@ function getAbsolutePath(path) {
   }
 }
 
-const [title, setTitle] = useState('')
+// const [title, setTitle] = useState('')
 
 // const setTitle = (fileName) => {
 //   let title;
@@ -25,7 +25,7 @@ const [title, setTitle] = useState('')
 //   return title;
 // };
 
-function settingtitle(fileName) {
+// function settingtitle(fileName) {
   setTitle(fileName);
 
   let title;
@@ -37,7 +37,7 @@ function settingtitle(fileName) {
     title = 'Contact Us';
   }
   return title;
-};
+// };
 
   console.log('Outside function fileName is ', fileName, 'Outside function title is ', title)
 
