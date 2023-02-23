@@ -3,7 +3,7 @@ import React from 'react';
 
 const MyButton = ({hrefLink = '', linkText = ''}) => {
   const handleClick = () => {
-    window.location.href = `http://localhost:3000/${hrefLink}`;
+    window.location.href = `/${hrefLink}`;
   };
 
   return (
