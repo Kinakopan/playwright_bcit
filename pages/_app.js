@@ -11,17 +11,6 @@ function getAbsolutePath(path) {
   }
 }
 
-function MyComponent() {
-  const router = useRouter();
-  const fileName = router.pathname.substring(1); // remove the leading forward slash
-  return fileName;
-}
-
-const showMyComponent = async () => {
-  console.log('MyComponent file name is ',fileName);
-}
-
-
 const setTitle = (fileName) => {
   let title;
   if (fileName === "index") {
@@ -41,11 +30,8 @@ export default function App({ Component, pageProps }) {
   const title = (fileName.toLowerCase() === 'home') ? 'Home' : setTitle(fileName.toLowerCase());
 
   console.log('fileName is ', fileName, 'title is ', title)
-
   console.log('Inside fileName is ', fileName, 'Inside title is ', title)
-
   console.log('Inside Component.displayName is ', Component.displayName, 'Inside Component.name is ', Component.name)
-
   console.log('Inside Component is ', Component, 'Inside function pageProps is ', pageProps)
 
   return (
