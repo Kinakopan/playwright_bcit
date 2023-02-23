@@ -16,6 +16,7 @@ function MyComponent() {
   const fileName = router.pathname.substring(1); // remove the leading forward slash
   return fileName;
 }
+console.log('MyComponent file name is ',fileName);
 
 const setTitle = (fileName) => {
   let title;
