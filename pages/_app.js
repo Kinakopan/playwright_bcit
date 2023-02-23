@@ -24,7 +24,7 @@ const setTitle = (fileName) => {
   return title;
 };
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, fileName }) {
 
   const fileName = Component.displayName || Component.name || 'Unknown';
 
