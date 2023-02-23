@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 import '@/styles/variables.css'
 import Head from 'next/head'
-import { useState, useEffect } from "react";
 
 function getAbsolutePath(path) {
   if (path[0] === "/") {
@@ -24,7 +23,9 @@ const setTitle = (fileName) => {
   return title;
 };
 
-export default function App({ Component, pageProps, fileName }) {
+console.log('path is ', path, 'fileName is ', fileName, 'title is ', title)
+
+export default function App({ Component, pageProps }) {
 
   const fileName = Component.displayName || Component.name || 'Unknown';
 
