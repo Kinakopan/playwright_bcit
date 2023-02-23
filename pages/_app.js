@@ -29,6 +29,8 @@ export default function App({ Component, pageProps }) {
 
   const title = (fileName.toLowerCase() === 'home') ? 'Home' : setTitle(fileName.toLowerCase());
 
+  console.log('fileName is ', fileName, 'title is ', title)
+
   return (
     <>
       <Head>
