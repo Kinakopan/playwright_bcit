@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import '@/styles/variables.css'
 import Head from 'next/head'
+import { useRouter } from 'next/router';
 
 function getAbsolutePath(path) {
   if (path[0] === "/") {
@@ -8,6 +9,12 @@ function getAbsolutePath(path) {
   } else {
     return "/" + path;
   }
+}
+
+function MyComponent() {
+  const router = useRouter();
+  const fileName = router.pathname.substring(1); // remove the leading forward slash
+  return fileName;
 }
 
 const setTitle = (fileName) => {
