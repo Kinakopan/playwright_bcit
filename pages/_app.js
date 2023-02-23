@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import '@/styles/variables.css'
 import Head from 'next/head'
+import { useState, useEffect } from "react";
 
 function getAbsolutePath(path) {
   if (path[0] === "/") {
@@ -10,8 +11,23 @@ function getAbsolutePath(path) {
   }
 }
 
+const [title, setTitle] = useState('')
 
-const setTitle = (fileName) => {
+// const setTitle = (fileName) => {
+//   let title;
+//   if (fileName === "index") {
+//     title = 'Home';
+//   } else if (fileName === "about") {
+//     title = 'About Us';
+//   } else if (fileName === "contact") {
+//     title = 'Contact Us';
+//   }
+//   return title;
+// };
+
+function setTitle(fileName) {
+  setTitle(fileName);
+
   let title;
   if (fileName === "index") {
     title = 'Home';
